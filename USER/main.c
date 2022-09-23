@@ -1,11 +1,9 @@
 #include "stm32f10x.h"
-
+#include "mapping.h"
+#include "led.h"
 
 int main(void)
 {
-	while(1)
-	{
-		
-	}
+	led_init();
 }
 

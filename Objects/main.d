@@ -28,3 +28,5 @@
 .\objects\main.o: .\FWLIB\inc\stm32f10x_usart.h
 .\objects\main.o: .\FWLIB\inc\stm32f10x_wwdg.h
 .\objects\main.o: .\FWLIB\inc\misc.h
+.\objects\main.o: .\USER\mapping\mapping.h
+.\objects\main.o: .\USER\led\inc\led.h
