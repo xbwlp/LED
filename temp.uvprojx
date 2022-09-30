@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>.\USER\mapping;.\CMSIS;.\FWLIB\inc;.\USER;.\USER\led\inc;.\USER\led\src</IncludePath>
+              <IncludePath>.\USER\mapping;.\CMSIS;.\FWLIB\inc;.\USER;.\USER\led\inc;.\USER\led\src;.\USER\HDL_WS2812B\inc;.\USER\HDL_WS2812B\src;.\USER\delay\inc;.\USER\delay\src;.\USER\sys\inc;.\USER\sys\src</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -441,6 +441,21 @@
               <FileName>led.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\USER\led\src\led.c</FilePath>
+            </File>
+            <File>
+              <FileName>HDL_WS2812B.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USER\HDL_WS2812B\src\HDL_WS2812B.c</FilePath>
+            </File>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USER\delay\src\delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>sys.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USER\sys\src\sys.c</FilePath>
             </File>
           </Files>
         </Group>
