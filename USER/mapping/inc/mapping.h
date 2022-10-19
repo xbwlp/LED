@@ -2,7 +2,8 @@
 #define __MAPPING_H
 #include "stm32f10x.h"
 
-void mapp();
+double* mapp(int a, double x, double y, double omiga);
+
 
 #endif
 

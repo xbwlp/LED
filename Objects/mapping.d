@@ -1,5 +1,5 @@
-.\objects\mapping.o: USER\mapping\mapping.c
-.\objects\mapping.o: USER\mapping\mapping.h
+.\objects\mapping.o: USER\mapping\src\mapping.c
+.\objects\mapping.o: .\USER\mapping\inc\mapping.h
 .\objects\mapping.o: .\CMSIS\stm32f10x.h
 .\objects\mapping.o: .\CMSIS\core_cm3.h
 .\objects\mapping.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h

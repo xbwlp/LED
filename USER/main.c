@@ -6,15 +6,25 @@
 
 int main(void)
 {
+	int Green[8];
+	int Red[8];
+	int Blue[8];
+	
 	SystemInit();
 	delay_init();
 	PWM_WS2812B_Init(WS2812B_ARR);
+	mapp(4,2.0,3.0,60.0);
 	while(1)
 	{
 		WS2812B_Reset();
-		PWM_WS2812B_Red(1);		//灯珠个数可修改
-		PWM_WS2812B_Green(1);
-		PWM_WS2812B_Blue(1);
+		
+		for(int i=0;i<8;i++){
+			
+			PWM_WS2812B_Color(1,Green[i], Red[i], Blue[i]);
+			//PWM_WS2812B_Color(1, g, r, b);
+		}
+		
+		
 	}
 
 }
