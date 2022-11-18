@@ -117,8 +117,14 @@ void PWM_WS2812B_Blue(uint16_t num)
 	PWM_WS2812B_Show(num);
 }
 
-void PWM_WS2812B_Color(uint16_t num, uint32_t Green, uint32_t Red, uint32_t Blue)
+void PWM_WS2812B_Color(uint32_t Green, uint32_t Red, uint32_t Blue)
 {
-	PWM_WS2812B_Write_24Bits(num,Green*256*256+Red*256+Blue);
-	PWM_WS2812B_Show(num);
+	PWM_WS2812B_Write_24Bits(1,Green*256*256+Red*256+Blue);
+	PWM_WS2812B_Show(1);
+}
+
+void PWM_WS2812B_All(uint32_t color)
+{
+	PWM_WS2812B_Write_24Bits(1,color);
+	PWM_WS2812B_Show(1);
 }

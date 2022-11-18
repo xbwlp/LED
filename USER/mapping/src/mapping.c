@@ -11,3 +11,4 @@ double* mapp(int a, double x, double y, double omiga){
 	return t;
 };
 
+
