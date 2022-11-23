@@ -926,20 +926,20 @@ Image Symbol Table
     i.delay_ms                               0x08001794   Section        0  delay.o(i.delay_ms)
     i.delay_us                               0x080017e0   Section        0  delay.o(i.delay_us)
     i.main                                   0x0800182c   Section        0  main.o(i.main)
-    i.mapp                                   0x080018a4   Section        0  mapping.o(i.mapp)
-    i.sin                                    0x080019c4   Section        0  sin.o(i.sin)
-    i.sqrt                                   0x08001a64   Section        0  sqrt.o(i.sqrt)
-    .constdata                               0x08001ab0   Section      192  main.o(.constdata)
-    .constdata                               0x08001b70   Section       80  acos.o(.constdata)
-    pS                                       0x08001b70   Data          48  acos.o(.constdata)
-    qS                                       0x08001ba0   Data          32  acos.o(.constdata)
-    .constdata                               0x08001bc0   Section       48  cos_i.o(.constdata)
-    C                                        0x08001bc0   Data          48  cos_i.o(.constdata)
-    .constdata                               0x08001bf0   Section      200  rred.o(.constdata)
-    pio2s                                    0x08001bf0   Data          48  rred.o(.constdata)
-    twooverpi                                0x08001c20   Data         152  rred.o(.constdata)
-    .constdata                               0x08001cb8   Section       40  sin_i.o(.constdata)
-    S                                        0x08001cb8   Data          40  sin_i.o(.constdata)
+    i.mapp                                   0x080018dc   Section        0  mapping.o(i.mapp)
+    i.sin                                    0x080019fc   Section        0  sin.o(i.sin)
+    i.sqrt                                   0x08001a9c   Section        0  sqrt.o(i.sqrt)
+    .constdata                               0x08001ae8   Section      480  main.o(.constdata)
+    .constdata                               0x08001cc8   Section       80  acos.o(.constdata)
+    pS                                       0x08001cc8   Data          48  acos.o(.constdata)
+    qS                                       0x08001cf8   Data          32  acos.o(.constdata)
+    .constdata                               0x08001d18   Section       48  cos_i.o(.constdata)
+    C                                        0x08001d18   Data          48  cos_i.o(.constdata)
+    .constdata                               0x08001d48   Section      200  rred.o(.constdata)
+    pio2s                                    0x08001d48   Data          48  rred.o(.constdata)
+    twooverpi                                0x08001d78   Data         152  rred.o(.constdata)
+    .constdata                               0x08001e10   Section       40  sin_i.o(.constdata)
+    S                                        0x08001e10   Data          40  sin_i.o(.constdata)
     .data                                    0x20000000   Section       20  system_stm32f10x.o(.data)
     .data                                    0x20000014   Section        4  delay.o(.data)
     fac_us                                   0x20000014   Data           1  delay.o(.data)
@@ -1107,12 +1107,12 @@ Image Symbol Table
     delay_init                               0x08001751   Thumb Code    50  delay.o(i.delay_init)
     delay_ms                                 0x08001795   Thumb Code    72  delay.o(i.delay_ms)
     delay_us                                 0x080017e1   Thumb Code    72  delay.o(i.delay_us)
-    main                                     0x0800182d   Thumb Code   106  main.o(i.main)
-    mapp                                     0x080018a5   Thumb Code   278  mapping.o(i.mapp)
-    sin                                      0x080019c5   Thumb Code   150  sin.o(i.sin)
-    sqrt                                     0x08001a65   Thumb Code    76  sqrt.o(i.sqrt)
-    Region$$Table$$Base                      0x08001ce0   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08001d00   Number         0  anon$$obj.o(Region$$Table)
+    main                                     0x0800182d   Thumb Code   164  main.o(i.main)
+    mapp                                     0x080018dd   Thumb Code   278  mapping.o(i.mapp)
+    sin                                      0x080019fd   Thumb Code   150  sin.o(i.sin)
+    sqrt                                     0x08001a9d   Thumb Code    76  sqrt.o(i.sqrt)
+    Region$$Table$$Base                      0x08001e38   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08001e58   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x20000000   Data           4  system_stm32f10x.o(.data)
     AHBPrescTable                            0x20000004   Data          16  system_stm32f10x.o(.data)
     Single_LED_Buffer                        0x2000001c   Data        4800  hdl_ws2812b.o(.bss)
@@ -1126,9 +1126,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000131
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00001d1c, Max: 0x00010000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00001e74, Max: 0x00010000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00001d00, Max: 0x00010000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00001e58, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1221,27 +1221,27 @@ Memory Map of the image
     0x08001750   0x08001750   0x00000044   Code   RO          300    i.delay_init        delay.o
     0x08001794   0x08001794   0x0000004c   Code   RO          301    i.delay_ms          delay.o
     0x080017e0   0x080017e0   0x0000004c   Code   RO          302    i.delay_us          delay.o
-    0x0800182c   0x0800182c   0x00000078   Code   RO           17    i.main              main.o
-    0x080018a4   0x080018a4   0x00000120   Code   RO          354    i.mapp              mapping.o
-    0x080019c4   0x080019c4   0x000000a0   Code   RO         3351    i.sin               m_ws.l(sin.o)
-    0x08001a64   0x08001a64   0x0000004c   Code   RO         3410    i.sqrt              m_ws.l(sqrt.o)
-    0x08001ab0   0x08001ab0   0x000000c0   Data   RO           18    .constdata          main.o
-    0x08001b70   0x08001b70   0x00000050   Data   RO         3342    .constdata          m_ws.l(acos.o)
-    0x08001bc0   0x08001bc0   0x00000030   Data   RO         3380    .constdata          m_ws.l(cos_i.o)
-    0x08001bf0   0x08001bf0   0x000000c8   Data   RO         3400    .constdata          m_ws.l(rred.o)
-    0x08001cb8   0x08001cb8   0x00000028   Data   RO         3404    .constdata          m_ws.l(sin_i.o)
-    0x08001ce0   0x08001ce0   0x00000020   Data   RO         3461    Region$$Table       anon$$obj.o
+    0x0800182c   0x0800182c   0x000000b0   Code   RO           17    i.main              main.o
+    0x080018dc   0x080018dc   0x00000120   Code   RO          354    i.mapp              mapping.o
+    0x080019fc   0x080019fc   0x000000a0   Code   RO         3351    i.sin               m_ws.l(sin.o)
+    0x08001a9c   0x08001a9c   0x0000004c   Code   RO         3410    i.sqrt              m_ws.l(sqrt.o)
+    0x08001ae8   0x08001ae8   0x000001e0   Data   RO           18    .constdata          main.o
+    0x08001cc8   0x08001cc8   0x00000050   Data   RO         3342    .constdata          m_ws.l(acos.o)
+    0x08001d18   0x08001d18   0x00000030   Data   RO         3380    .constdata          m_ws.l(cos_i.o)
+    0x08001d48   0x08001d48   0x000000c8   Data   RO         3400    .constdata          m_ws.l(rred.o)
+    0x08001e10   0x08001e10   0x00000028   Data   RO         3404    .constdata          m_ws.l(sin_i.o)
+    0x08001e38   0x08001e38   0x00000020   Data   RO         3461    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08001d00, Size: 0x000016e0, Max: 0x00005000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08001e58, Size: 0x000016e0, Max: 0x00005000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08001d00   0x00000014   Data   RW          195    .data               system_stm32f10x.o
-    0x20000014   0x08001d14   0x00000004   Data   RW          303    .data               delay.o
-    0x20000018   0x08001d18   0x00000004   Data   RW         3438    .data               mc_w.l(errno.o)
+    0x20000000   0x08001e58   0x00000014   Data   RW          195    .data               system_stm32f10x.o
+    0x20000014   0x08001e6c   0x00000004   Data   RW          303    .data               delay.o
+    0x20000018   0x08001e70   0x00000004   Data   RW         3438    .data               mc_w.l(errno.o)
     0x2000001c        -       0x000012c0   Zero   RW          246    .bss                hdl_ws2812b.o
-    0x200012dc   0x08001d1c   0x00000004   PAD
+    0x200012dc   0x08001e74   0x00000004   PAD
     0x200012e0        -       0x00000400   Zero   RW         3333    STACK               startup_stm32f10x_hd.o
 
 
@@ -1255,7 +1255,7 @@ Image component sizes
          0          0          0          0          0       4532   core_cm3.o
        220         26          0          4          0       1519   delay.o
        416         30          0          0       4800       3467   hdl_ws2812b.o
-       120         14        192          0          0     240639   main.o
+       176         12        480          0          0     240851   main.o
        288         10          0          0          0        651   mapping.o
         40          0          0          0          0        446   misc.o
         36          8        304          0       1024        768   startup_stm32f10x_hd.o
@@ -1267,7 +1267,7 @@ Image component sizes
        328         28          0         20          0       2025   system_stm32f10x.o
 
     ----------------------------------------------------------------------
-      2422        204        528         24       5828     268733   Object Totals
+      2478        202        816         24       5828     268945   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         14          0          0          0          4          0   (incl. Padding)
 
@@ -1334,15 +1334,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      6528        414        896         28       5828     268433   Grand Totals
-      6528        414        896         28       5828     268433   ELF Image Totals
-      6528        414        896         28          0          0   ROM Totals
+      6584        412       1184         28       5828     268645   Grand Totals
+      6584        412       1184         28       5828     268645   ELF Image Totals
+      6584        412       1184         28          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 7424 (   7.25kB)
+    Total RO  Size (Code + RO Data)                 7768 (   7.59kB)
     Total RW  Size (RW Data + ZI Data)              5856 (   5.72kB)
-    Total ROM Size (Code + RO Data + RW Data)       7452 (   7.28kB)
+    Total ROM Size (Code + RO Data + RW Data)       7796 (   7.61kB)
 
 ==============================================================================
 
