@@ -12,6 +12,14 @@ uint16_t Single_LED_Buffer[DATA_SIZE*LED_NUM];
 */
 void PWM_WS2812B_Init(uint16_t arr)
 {
+	
+	
+
+	
+	
+	
+	
+	
 	//结构体变量
 	GPIO_InitTypeDef  GPIO_InitStructure;
 	TIM_TimeBaseInitTypeDef  TIM_TimeBaseStructure;
@@ -65,6 +73,41 @@ void PWM_WS2812B_Init(uint16_t arr)
   	DMA_Cmd(DMA1_Channel7, DISABLE);					//失能DMA1的7通道，因为一旦使能就开始传输
 }
 //复位灯带
+
+void delay_color(){
+	 NVIC_InitTypeDef NVIC_InitStruct;
+	 TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStructure;  
+	 
+	 RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);//使能定时器3的时钟
+	 
+	 NVIC_PriorityGroupConfig(NVIC_PriorityGroup_0);
+	 
+	 NVIC_InitStruct.NVIC_IRQChannel = TIM3_IRQn;  //定时器3中断
+	 NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;  //使能IRQ通道
+	 NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 0;//抢占优先级1
+	 NVIC_InitStruct.NVIC_IRQChannelSubPriority = 3;       //响应优先级3
+	 NVIC_Init(&NVIC_InitStruct);
+
+	 TIM_InternalClockConfig(TIM3);
+	 
+	 //TIM时基单元初始化，决定采样周期
+	 
+	 TIM_TimeBaseInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;
+	 TIM_TimeBaseInitStructure.TIM_CounterMode = TIM_CounterMode_Up;
+	 TIM_TimeBaseInitStructure.TIM_Period = 72000 / 450 - 1; //ARR
+	 TIM_TimeBaseInitStructure.TIM_Prescaler = 1000 - 1; //PSC
+	 TIM_TimeBaseInitStructure.TIM_RepetitionCounter = 0;
+	 TIM_TimeBaseInit(TIM3, &TIM_TimeBaseInitStructure);
+	 
+	 TIM_ClearFlag(TIM3, TIM_FLAG_Update);//清除TIM的更新标志位
+	 TIM_ITConfig(TIM3, TIM_IT_Update, ENABLE);//使能定时器中断
+	 TIM_SetCounter(TIM3,0);
+	 TIM_Cmd(TIM3, ENABLE); //使能定时器
+	
+}
+
+
+
 void WS2812B_Reset(void)
 {
 	TIM_Cmd(TIM2, DISABLE);

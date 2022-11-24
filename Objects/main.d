@@ -33,3 +33,4 @@
 .\objects\main.o: .\USER\HDL_WS2812B\inc\HDL_WS2812B.h
 .\objects\main.o: .\USER\delay\inc\delay.h
 .\objects\main.o: .\USER\sys\inc\sys.h
+.\objects\main.o: D:\keil5\ARM\ARMCC\Bin\..\include\math.h
