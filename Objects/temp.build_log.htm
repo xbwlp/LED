@@ -30,19 +30,19 @@ Build target 'temp'
 compiling main.c...
 .\USER\led\inc\led.h(5): warning:  #1295-D: Deprecated declaration led_init - give arg types
   void led_init();
-USER\main.c(54): warning:  #223-D: function "delay_color" declared implicitly
+USER\main.c(62): warning:  #223-D: function "delay_color" declared implicitly
   	delay_color();
-USER\main.c(39): warning:  #177-D: variable "Green"  was declared but never referenced
+USER\main.c(47): warning:  #177-D: variable "Green"  was declared but never referenced
   	int Green[8];
-USER\main.c(40): warning:  #177-D: variable "Red"  was declared but never referenced
+USER\main.c(48): warning:  #177-D: variable "Red"  was declared but never referenced
   	int Red[8];
-USER\main.c(41): warning:  #177-D: variable "Blue"  was declared but never referenced
+USER\main.c(49): warning:  #177-D: variable "Blue"  was declared but never referenced
   	int Blue[8];
-USER\main.c(74): warning:  #223-D: function "PWM_WS2812B_All" declared implicitly
-  							PWM_WS2812B_All(a[0][num][0]);
+USER\main.c(82): warning:  #223-D: function "PWM_WS2812B_All" declared implicitly
+  							PWM_WS2812B_All(a[pic][num][0]);
 USER\main.c: 6 warnings, 0 errors
 linking...
-Program Size: Code=2672 RO-data=336 RW-data=508 ZI-data=5828  
+Program Size: Code=2776 RO-data=336 RW-data=992 ZI-data=5824  
 FromELF: creating hex file...
 ".\Objects\temp.axf" - 0 Error(s), 6 Warning(s).
 
@@ -58,7 +58,7 @@ Package Vendor: Keil
   D:\keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>
